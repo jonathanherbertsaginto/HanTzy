@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E5C36CF26391DF3007EC59E /* testing.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5C36CE26391DF3007EC59E /* testing.png */; };
+		4E5C36D226394CEB007EC59E /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4E5C36D126394CEB007EC59E /* labels.txt */; };
+		4E958D9626387E2B00B9C542 /* chineseHWRecognition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4E958D9526387E2B00B9C542 /* chineseHWRecognition.mlmodel */; };
+		4E958D9926387E9000B9C542 /* test7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E958D9826387E9000B9C542 /* test7.png */; };
 		4EB25B962637E41500A5AD15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB25B952637E41500A5AD15 /* AppDelegate.swift */; };
 		4EB25B982637E41500A5AD15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB25B972637E41500A5AD15 /* SceneDelegate.swift */; };
 		4EB25B9A2637E41500A5AD15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB25B992637E41500A5AD15 /* ViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E5C36CE26391DF3007EC59E /* testing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = testing.png; path = ../../../../Downloads/testing.png; sourceTree = "<group>"; };
+		4E5C36D126394CEB007EC59E /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labels.txt; path = ../../../recognizer/labels.txt; sourceTree = "<group>"; };
+		4E958D9526387E2B00B9C542 /* chineseHWRecognition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = chineseHWRecognition.mlmodel; path = ../../../chineseHWRecognition.mlmodel; sourceTree = "<group>"; };
+		4E958D9826387E9000B9C542 /* test7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test7.png; path = ../../../test7.png; sourceTree = "<group>"; };
 		4EB25B922637E41500A5AD15 /* HanTzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HanTzy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB25B952637E41500A5AD15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EB25B972637E41500A5AD15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,10 +64,14 @@
 		4EB25B942637E41500A5AD15 /* HanTzy */ = {
 			isa = PBXGroup;
 			children = (
+				4E5C36D126394CEB007EC59E /* labels.txt */,
+				4E5C36CE26391DF3007EC59E /* testing.png */,
+				4E958D9526387E2B00B9C542 /* chineseHWRecognition.mlmodel */,
 				4EB25B952637E41500A5AD15 /* AppDelegate.swift */,
 				4EB25B972637E41500A5AD15 /* SceneDelegate.swift */,
 				4EB25B992637E41500A5AD15 /* ViewController.swift */,
 				4EB25B9B2637E41500A5AD15 /* Main.storyboard */,
+				4E958D9826387E9000B9C542 /* test7.png */,
 				4EB25B9E2637E41600A5AD15 /* Assets.xcassets */,
 				4EB25BA02637E41600A5AD15 /* LaunchScreen.storyboard */,
 				4EB25BA32637E41600A5AD15 /* Info.plist */,
@@ -83,6 +95,8 @@
 			dependencies = (
 			);
 			name = HanTzy;
+			packageProductDependencies = (
+			);
 			productName = HanTzy;
 			productReference = 4EB25B922637E41500A5AD15 /* HanTzy.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +124,8 @@
 				Base,
 			);
 			mainGroup = 4EB25B892637E41500A5AD15;
+			packageReferences = (
+			);
 			productRefGroup = 4EB25B932637E41500A5AD15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,8 +141,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EB25BA22637E41600A5AD15 /* LaunchScreen.storyboard in Resources */,
+				4E5C36D226394CEB007EC59E /* labels.txt in Resources */,
 				4EB25B9F2637E41600A5AD15 /* Assets.xcassets in Resources */,
 				4EB25B9D2637E41500A5AD15 /* Main.storyboard in Resources */,
+				4E5C36CF26391DF3007EC59E /* testing.png in Resources */,
+				4E958D9926387E9000B9C542 /* test7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +159,7 @@
 				4EB25B9A2637E41500A5AD15 /* ViewController.swift in Sources */,
 				4EB25B962637E41500A5AD15 /* AppDelegate.swift in Sources */,
 				4EB25B982637E41500A5AD15 /* SceneDelegate.swift in Sources */,
+				4E958D9626387E2B00B9C542 /* chineseHWRecognition.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +307,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Z4Q9W97SA;
 				INFOPLIST_FILE = HanTzy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,6 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Z4Q9W97SA;
 				INFOPLIST_FILE = HanTzy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
