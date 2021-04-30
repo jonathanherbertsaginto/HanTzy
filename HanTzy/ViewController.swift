@@ -11,20 +11,19 @@ import CoreML
 
 class ViewController: UIViewController, PKCanvasViewDelegate {
     let model = chineseHWRecognition()
-    @IBOutlet weak var canvasView: PKCanvasView!
     @IBOutlet weak var predictionLabel: UILabel!
     var drawing = PKDrawing()
     var labels = try? String(contentsOfFile: Bundle.main.path(forResource: "labels", ofType: "txt")!, encoding: String.Encoding.utf8).components(separatedBy: "\n")
+    
+    let canvasView = PKCanvasView(frame: CGRect(x:0 , y: 208, width: 350, height: 350))
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let beginImage = CIImage(image: UIImage(named: "test7.png")!)
-//        let filter = CIFilter(name: "CIColorInvert")
-//        filter!.setValue(beginImage, forKey: kCIInputImageKey)
-//        var image = UIImage(ciImage: (filter?.outputImage!)!)
         
+        view.addSubview(canvasView)
         updateCanvas()
         canvasView.delegate = self
         canvasView.drawing = drawing
+        canvasView.center = view.center
         canvasView.backgroundColor = .white
         canvasView.tool = PKInkingTool(.marker, color: .black)
         canvasView.drawingPolicy = .anyInput
@@ -47,19 +46,17 @@ class ViewController: UIViewController, PKCanvasViewDelegate {
     }
     @IBAction func predict(_ sender: Any) {
         print(canvasView.drawing.strokes.count)
-        var image = canvasView.drawing.image(from:  self.canvasView.bounds, scale: 1.0)
+        let getimage = canvasView.drawing.image(from:  self.canvasView.bounds, scale: 1.0)
         if canvasView.drawing.strokes.count > 0{
-            image = grayscale(image: image)!
-            image = invert(image: image)!
+            let grayimage = grayscale(image: getimage)!
+            let invertimage = invert(image: grayimage)!
 
-            let newArray = image.preprocess(image: image)
-            print("tidak error hiya")
-            var output = try? model.prediction(input_1: newArray!)
+            let output = try? model.prediction(input_1: invertimage.preprocess(image: invertimage)!)
             if let b = try? UnsafeBufferPointer<Float>(output!.Identity) {
                 let c = Array(b)
-                var maxVal = c.max()
-                var index = c.index(of: maxVal!)
-                predictionLabel.text = labels?[index!]
+                let maxVal = c.max()
+                let index = c.firstIndex(of: maxVal!)
+//                predictionLabel.text = labels?[index!]
             }
             canvasView.drawing = PKDrawing()
         
@@ -110,33 +107,29 @@ extension UIImage{
             let colorSpace = CGColorSpaceCreateDeviceRGB()
             let context = CGContext(data: &pixelData, width: Int(size.width), height: Int(size.height), bitsPerComponent: 8, bytesPerRow: 4 * Int(size.width), space: colorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue)
             
-            guard let cgImage = self.cgImage else { return nil }
-            context?.draw(cgImage, in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+            let cgImage = self.cgImage
+        context?.draw(cgImage!, in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
             
             return pixelData
     }
     func preprocess(image: UIImage) -> MLMultiArray? {
         let size = CGSize(width: 96, height: 96)
 
-        guard let pixels = image.resize(to: size).pixelData()?.map({ (Double($0) / 255.0)}) else {
-            return nil
-        }
+        let pixels = image.resize(to: size).pixelData()?.map({ (Double($0) / 255.0)})
 
-        guard let array = try? MLMultiArray(shape: [1, 96, 96,1], dataType: .float32) else {
-            return nil
-        }
+        let arrays = try? MLMultiArray.init(shape: [1, 96, 96,1], dataType: .float32)
+        let array = try? MLMultiArray.init(shape: [1, 96, 96,1], dataType: .float32)
         
-        let r = pixels.enumerated().filter { $0.offset % 4 == 0 }.map { $0.element }
-        let g = pixels.enumerated().filter { $0.offset % 4 == 1 }.map { $0.element }
-        let b = pixels.enumerated().filter { $0.offset % 4 == 2 }.map { $0.element }
+        let r = pixels!.enumerated().filter { $0.offset % 4 == 0 }.map { $0.element }
+        let g = pixels!.enumerated().filter { $0.offset % 4 == 1 }.map { $0.element }
+        let b = pixels!.enumerated().filter { $0.offset % 4 == 2 }.map { $0.element }
         
         let combination = r + g + b
         for (index, element) in combination.enumerated() {
-            array[index] = NSNumber(value: element)
+            array![index] = NSNumber(value: element)
         }
-        let newArray = array
-        
-        return newArray
+        print(array)
+        return arrays
     }
 }
 
