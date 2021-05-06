@@ -1,0 +1,6 @@
+framework module Pods_HanTzy {
+  umbrella header "Pods-HanTzy-umbrella.h"
+
+  export *
+  module * { export * }
+}

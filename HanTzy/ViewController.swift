@@ -56,7 +56,7 @@ class ViewController: UIViewController, PKCanvasViewDelegate {
                 let c = Array(b)
                 let maxVal = c.max()
                 let index = c.firstIndex(of: maxVal!)
-//                predictionLabel.text = labels?[index!]
+                predictionLabel.text = labels?[index!]
             }
             canvasView.drawing = PKDrawing()
         
@@ -88,48 +88,6 @@ class ViewController: UIViewController, PKCanvasViewDelegate {
             }
         }
         return nil
-    }
-}
-
-extension UIImage{
-    
-    public func resize(to newSize: CGSize) -> UIImage {
-                    UIGraphicsBeginImageContextWithOptions(CGSize(width: newSize.width, height: newSize.height), true, 1.0)
-            self.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
-            let resizedImage = UIGraphicsGetImageFromCurrentImageContext()!
-            UIGraphicsEndImageContext()
-            
-            return resizedImage
-    }
-    public func pixelData() -> [UInt8]? {
-            let dataSize = size.width * size.height * 4
-            var pixelData = [UInt8](repeating: 0, count: Int(dataSize))
-            let colorSpace = CGColorSpaceCreateDeviceRGB()
-            let context = CGContext(data: &pixelData, width: Int(size.width), height: Int(size.height), bitsPerComponent: 8, bytesPerRow: 4 * Int(size.width), space: colorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue)
-            
-            let cgImage = self.cgImage
-        context?.draw(cgImage!, in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-            
-            return pixelData
-    }
-    func preprocess(image: UIImage) -> MLMultiArray? {
-        let size = CGSize(width: 96, height: 96)
-
-        let pixels = image.resize(to: size).pixelData()?.map({ (Double($0) / 255.0)})
-
-        let arrays = try? MLMultiArray.init(shape: [1, 96, 96,1], dataType: .float32)
-        let array = try? MLMultiArray.init(shape: [1, 96, 96,1], dataType: .float32)
-        
-        let r = pixels!.enumerated().filter { $0.offset % 4 == 0 }.map { $0.element }
-        let g = pixels!.enumerated().filter { $0.offset % 4 == 1 }.map { $0.element }
-        let b = pixels!.enumerated().filter { $0.offset % 4 == 2 }.map { $0.element }
-        
-        let combination = r + g + b
-        for (index, element) in combination.enumerated() {
-            array![index] = NSNumber(value: element)
-        }
-        print(array)
-        return arrays
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0EE5BC2642BF4C001C11AA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4E0EE5BB2642BF4C001C11AA /* Podfile */; };
 		4E5C36D226394CEB007EC59E /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4E5C36D126394CEB007EC59E /* labels.txt */; };
 		4E958D9626387E2B00B9C542 /* chineseHWRecognition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4E958D9526387E2B00B9C542 /* chineseHWRecognition.mlmodel */; };
 		4EB25B962637E41500A5AD15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB25B952637E41500A5AD15 /* AppDelegate.swift */; };
@@ -15,10 +16,23 @@
 		4EB25B9D2637E41500A5AD15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB25B9B2637E41500A5AD15 /* Main.storyboard */; };
 		4EB25B9F2637E41600A5AD15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB25B9E2637E41600A5AD15 /* Assets.xcassets */; };
 		4EB25BA22637E41600A5AD15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB25BA02637E41600A5AD15 /* LaunchScreen.storyboard */; };
+		4EC6C3AC263EA36C003F70B0 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC6C3AB263EA36C003F70B0 /* TutorialViewController.swift */; };
+		4EC6C3B1263EAA7D003F70B0 /* gifLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC6C3B0263EAA7D003F70B0 /* gifLoad.swift */; };
+		4EC6C3B7263EAF52003F70B0 /* 要.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4EC6C3B6263EAF52003F70B0 /* 要.gif */; };
+		4EC6C3BB263EB045003F70B0 /* 回.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4EC6C3BA263EB045003F70B0 /* 回.gif */; };
+		4EC6C3BE263EB28B003F70B0 /* hanziData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC6C3BD263EB28B003F70B0 /* hanziData.swift */; };
+		4EC6C3C0263EFE5D003F70B0 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC6C3BF263EFE5D003F70B0 /* PracticeViewController.swift */; };
+		4EC6C3C4263F0A7C003F70B0 /* 非.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4EC6C3C1263F0A7C003F70B0 /* 非.gif */; };
+		4EC6C3C5263F0A7C003F70B0 /* 时.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4EC6C3C2263F0A7C003F70B0 /* 时.gif */; };
+		4EC6C3C6263F0A7C003F70B0 /* 这.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4EC6C3C3263F0A7C003F70B0 /* 这.gif */; };
+		4EDB0948263FB07200E58868 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB0947263FB07200E58868 /* ScoreViewController.swift */; };
+		4EDB094D263FD8E200E58868 /* imagePreprocess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB094C263FD8E200E58868 /* imagePreprocess.swift */; };
 		4EFF9F44263BD1C400F37CB5 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFF9F43263BD1C400F37CB5 /* MainMenuController.swift */; };
+		808D9D92AC98DDEB329B488A /* Pods_HanTzy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB77E1E13E996CA3FC5CFB6 /* Pods_HanTzy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E0EE5BB2642BF4C001C11AA /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		4E5C36D126394CEB007EC59E /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labels.txt; path = ../../../recognizer/labels.txt; sourceTree = "<group>"; };
 		4E958D9526387E2B00B9C542 /* chineseHWRecognition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = chineseHWRecognition.mlmodel; path = ../../../chineseHWRecognition.mlmodel; sourceTree = "<group>"; };
 		4EB25B922637E41500A5AD15 /* HanTzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HanTzy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,7 +43,21 @@
 		4EB25B9E2637E41600A5AD15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EB25BA12637E41600A5AD15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EB25BA32637E41600A5AD15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EC6C3AB263EA36C003F70B0 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		4EC6C3B0263EAA7D003F70B0 /* gifLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifLoad.swift; sourceTree = "<group>"; };
+		4EC6C3B6263EAF52003F70B0 /* 要.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "要.gif"; sourceTree = "<group>"; };
+		4EC6C3BA263EB045003F70B0 /* 回.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "回.gif"; sourceTree = "<group>"; };
+		4EC6C3BD263EB28B003F70B0 /* hanziData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hanziData.swift; sourceTree = "<group>"; };
+		4EC6C3BF263EFE5D003F70B0 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
+		4EC6C3C1263F0A7C003F70B0 /* 非.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "非.gif"; sourceTree = "<group>"; };
+		4EC6C3C2263F0A7C003F70B0 /* 时.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "时.gif"; sourceTree = "<group>"; };
+		4EC6C3C3263F0A7C003F70B0 /* 这.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "这.gif"; sourceTree = "<group>"; };
+		4EDB0947263FB07200E58868 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		4EDB094C263FD8E200E58868 /* imagePreprocess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagePreprocess.swift; sourceTree = "<group>"; };
 		4EFF9F43263BD1C400F37CB5 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+		5BEA2D13E0DDC683E0F3B211 /* Pods-HanTzy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HanTzy.release.xcconfig"; path = "Target Support Files/Pods-HanTzy/Pods-HanTzy.release.xcconfig"; sourceTree = "<group>"; };
+		CAB77E1E13E996CA3FC5CFB6 /* Pods_HanTzy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HanTzy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3282360291B692B7270283D /* Pods-HanTzy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HanTzy.debug.xcconfig"; path = "Target Support Files/Pods-HanTzy/Pods-HanTzy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				808D9D92AC98DDEB329B488A /* Pods_HanTzy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,8 +75,11 @@
 		4EB25B892637E41500A5AD15 = {
 			isa = PBXGroup;
 			children = (
+				4E0EE5BB2642BF4C001C11AA /* Podfile */,
 				4EB25B942637E41500A5AD15 /* HanTzy */,
 				4EB25B932637E41500A5AD15 /* Products */,
+				63EBDF8D301E08C2B8EA8B85 /* Pods */,
+				EABD87D96F1B65A2C94E0952 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +94,11 @@
 		4EB25B942637E41500A5AD15 /* HanTzy */ = {
 			isa = PBXGroup;
 			children = (
+				4EDB0949263FD42A00E58868 /* extension */,
+				4EC6C3BC263EB279003F70B0 /* model */,
+				4EC6C3B2263EAB9C003F70B0 /* gif */,
+				4EC6C3AD263EA9D2003F70B0 /* service */,
+				4EC6C3AA263EA357003F70B0 /* controller */,
 				4E5C36D126394CEB007EC59E /* labels.txt */,
 				4E958D9526387E2B00B9C542 /* chineseHWRecognition.mlmodel */,
 				4EB25B952637E41500A5AD15 /* AppDelegate.swift */,
@@ -71,9 +108,73 @@
 				4EB25B9E2637E41600A5AD15 /* Assets.xcassets */,
 				4EB25BA02637E41600A5AD15 /* LaunchScreen.storyboard */,
 				4EB25BA32637E41600A5AD15 /* Info.plist */,
-				4EFF9F43263BD1C400F37CB5 /* MainMenuController.swift */,
 			);
 			path = HanTzy;
+			sourceTree = "<group>";
+		};
+		4EC6C3AA263EA357003F70B0 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4EFF9F43263BD1C400F37CB5 /* MainMenuController.swift */,
+				4EC6C3AB263EA36C003F70B0 /* TutorialViewController.swift */,
+				4EC6C3BF263EFE5D003F70B0 /* PracticeViewController.swift */,
+				4EDB0947263FB07200E58868 /* ScoreViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4EC6C3AD263EA9D2003F70B0 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				4EC6C3B0263EAA7D003F70B0 /* gifLoad.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		4EC6C3B2263EAB9C003F70B0 /* gif */ = {
+			isa = PBXGroup;
+			children = (
+				4EC6C3C2263F0A7C003F70B0 /* 时.gif */,
+				4EC6C3C3263F0A7C003F70B0 /* 这.gif */,
+				4EC6C3C1263F0A7C003F70B0 /* 非.gif */,
+				4EC6C3BA263EB045003F70B0 /* 回.gif */,
+				4EC6C3B6263EAF52003F70B0 /* 要.gif */,
+			);
+			path = gif;
+			sourceTree = "<group>";
+		};
+		4EC6C3BC263EB279003F70B0 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4EC6C3BD263EB28B003F70B0 /* hanziData.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4EDB0949263FD42A00E58868 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				4EDB094C263FD8E200E58868 /* imagePreprocess.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		63EBDF8D301E08C2B8EA8B85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3282360291B692B7270283D /* Pods-HanTzy.debug.xcconfig */,
+				5BEA2D13E0DDC683E0F3B211 /* Pods-HanTzy.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EABD87D96F1B65A2C94E0952 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAB77E1E13E996CA3FC5CFB6 /* Pods_HanTzy.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,17 +184,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EB25BA62637E41600A5AD15 /* Build configuration list for PBXNativeTarget "HanTzy" */;
 			buildPhases = (
+				86E7091195C17CBFC4A62654 /* [CP] Check Pods Manifest.lock */,
 				4EB25B8E2637E41500A5AD15 /* Sources */,
 				4EB25B8F2637E41500A5AD15 /* Frameworks */,
 				4EB25B902637E41500A5AD15 /* Resources */,
+				371AFFE46D7EA5AB04792CC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = HanTzy;
-			packageProductDependencies = (
-			);
 			productName = HanTzy;
 			productReference = 4EB25B922637E41500A5AD15 /* HanTzy.app */;
 			productType = "com.apple.product-type.application";
@@ -121,8 +222,6 @@
 				Base,
 			);
 			mainGroup = 4EB25B892637E41500A5AD15;
-			packageReferences = (
-			);
 			productRefGroup = 4EB25B932637E41500A5AD15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,14 +236,62 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0EE5BC2642BF4C001C11AA /* Podfile in Resources */,
+				4EC6C3C4263F0A7C003F70B0 /* 非.gif in Resources */,
+				4EC6C3B7263EAF52003F70B0 /* 要.gif in Resources */,
 				4EB25BA22637E41600A5AD15 /* LaunchScreen.storyboard in Resources */,
 				4E5C36D226394CEB007EC59E /* labels.txt in Resources */,
+				4EC6C3BB263EB045003F70B0 /* 回.gif in Resources */,
 				4EB25B9F2637E41600A5AD15 /* Assets.xcassets in Resources */,
+				4EC6C3C6263F0A7C003F70B0 /* 这.gif in Resources */,
 				4EB25B9D2637E41500A5AD15 /* Main.storyboard in Resources */,
+				4EC6C3C5263F0A7C003F70B0 /* 时.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		371AFFE46D7EA5AB04792CC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HanTzy/Pods-HanTzy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HanTzy/Pods-HanTzy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HanTzy/Pods-HanTzy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86E7091195C17CBFC4A62654 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HanTzy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4EB25B8E2637E41500A5AD15 /* Sources */ = {
@@ -154,7 +301,13 @@
 				4EB25B9A2637E41500A5AD15 /* ViewController.swift in Sources */,
 				4EB25B962637E41500A5AD15 /* AppDelegate.swift in Sources */,
 				4EB25B982637E41500A5AD15 /* SceneDelegate.swift in Sources */,
+				4EC6C3C0263EFE5D003F70B0 /* PracticeViewController.swift in Sources */,
 				4E958D9626387E2B00B9C542 /* chineseHWRecognition.mlmodel in Sources */,
+				4EDB094D263FD8E200E58868 /* imagePreprocess.swift in Sources */,
+				4EC6C3AC263EA36C003F70B0 /* TutorialViewController.swift in Sources */,
+				4EC6C3B1263EAA7D003F70B0 /* gifLoad.swift in Sources */,
+				4EDB0948263FB07200E58868 /* ScoreViewController.swift in Sources */,
+				4EC6C3BE263EB28B003F70B0 /* hanziData.swift in Sources */,
 				4EFF9F44263BD1C400F37CB5 /* MainMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +452,7 @@
 		};
 		4EB25BA72637E41600A5AD15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3282360291B692B7270283D /* Pods-HanTzy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +472,7 @@
 		};
 		4EB25BA82637E41600A5AD15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BEA2D13E0DDC683E0F3B211 /* Pods-HanTzy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
